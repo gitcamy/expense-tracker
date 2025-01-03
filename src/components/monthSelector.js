@@ -2,7 +2,7 @@ export default function MonthSelector({ selectedMonth, setSelectedMonth }) {
   return(
     <div className="month-selector-container">  
      <div className="month-selector">
-      <select value="Select Month"
+      <select value={selectedMonth} 
         onChange={(e) => {
           const month = e.target.value;
           setSelectedMonth(month);
