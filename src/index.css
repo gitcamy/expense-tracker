@@ -239,7 +239,7 @@ select {
 }
 
 label {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 1rem;
   color:rgb(180, 101, 254); 
   font-weight: bold;
@@ -318,6 +318,9 @@ select:hover {
 .modal-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
 }
 
 .collapse-column {
@@ -329,13 +332,16 @@ select:hover {
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 10px;
 }
 
 .add-expense-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
 .add-expense-form select {
@@ -356,6 +362,11 @@ input {
   border: 1.5px solid rgb(255, 255, 255);
   background-color: transparent;
   color:rgb(255, 255, 255);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Makes it white */
+  cursor: pointer;
 }
 
 input:focus {
