@@ -150,13 +150,12 @@ export default function App() {
       
 
       <div className="action-container">
-      <h1>Monthly Expense Tracker</h1>
+      <h1>Monthly Expense Tracker - {handleConvertMonth(selectedMonth)}</h1>
        
 
         <AddExpense onAddExpense={handleExpenseAdd} initialCategories={initialCategories} />
       </div>
-      
-      <h3 className="month-title">{handleConvertMonth(selectedMonth)}</h3>
+
       <MonthSelector 
           selectedMonth={selectedMonth} 
           setSelectedMonth={handleMonthChange}
